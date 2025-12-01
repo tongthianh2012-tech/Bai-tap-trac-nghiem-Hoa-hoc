@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>APP BÀI TẬP TRẮC NGHIỆM HÓA HỌC</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="manifest.json" />
+  <style>
+    .btn.option { margin: 5px 5px 5px 0; }
+    .option.correct { background-color: #4CAF50; color: white; }
+    .option.incorrect { background-color: #f44336; color: white; }
+    .next-round { margin-top: 15px; background-color: #2196F3; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; }
+    .next-round:hover { background-color: #0b7dda; }
+  </style>
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-layout">
+      <div class="logo-box">
+        <img src="./assets/images/logo.png" alt="Logo trường" class="logo" />
+      </div>
+      <div class="text-box">
+        <div class="text-inner">
+          <p class="school-name">TRƯỜNG TH VÀ THCS CÀ NÀNG, XÃ MƯỜNG CHIÊN, TỈNH SƠN LA</p>
+          <h1 class="app-title">APP BÀI TẬP TRẮC NGHIỆM HÓA HỌC</h1>
+          <p class="app-slogan">*Hóa học là cây cầu nối giữa khoa học và cuộc sống*</p>
+          <p class="app-slogan">*Hiểu được Hóa học là hiểu thế giới vận hành như thế nào*</p>
+        </div>
+      </div>
+    </div>
+    <div class="bubble-zone"></div>
+  </header>
+
+  <main class="app-main">
+    <section class="panel">
+      <label for="topic" class="form-label">🔍 Chọn chủ đề:</label>
+      <select id="topic" class="select">
+        <option value="BTKL">Định luật BTKL</option>
+        <option value="Cân bằng PTHH">Cân bằng PTHH</option>
+        <option value="Liên kết hóa học">Liên kết hóa học</option>
+      </select>
+
+      <div class="actions">
+        <button id="generateQuiz" class="btn primary">🧬 Tạo bài tập</button>
+        <button id="submitQuiz" class="btn success" disabled>📤 Nộp bài</button>
+        <button id="funQuiz" class="btn fun">🎯 Đố vui</button>
+      </div>
+    </section>
+
+    <section id="quizContainer" class="quiz"></section>
+
+    <section id="results" class="results" hidden>
+      <h2>Kết quả</h2>
+      <div id="scoreSummary"></div>
+      <div id="explanations"></div>
+      <button id="practiceButton" class="btn" hidden>🔁 Luyện tiếp</button>
+    </section>
+  </main>
+
+  <!-- Âm thanh phản hồi cho phần Đố vui -->
+  <audio id="clapSound" preload="auto">
+    <source src="assets/sounds/clap.mp3" type="audio/mpeg" />
+    <source src="assets/sounds/clap.wav" type="audio/wav" />
+  </audio>
+
+  <audio id="ehSound" preload="auto">
+    <source src="assets/sounds/eh.mp3" type="audio/mpeg" />
+    <source src="assets/sounds/eh.wav" type="audio/wav" />
+  </audio>
+
+  <script src="js/aiHelper.js" defer></script>
+  <script src="js/quiz.js" defer></script>
+
+  <script>
+    function createAtomBubble() {
+      const bubble = document.createElement("div");
+      const atoms = ["O", "H", "N", "C"];
+      const atom = atoms[Math.floor(Math.random() * atoms.length)];
+      bubble.classList.add("atom-bubble");
+      bubble.textContent = atom;
+      bubble.style.left = Math.random() * window.innerWidth + "px";
+      bubble.style.animationDuration = (6 + Math.random() * 4) + "s";
+      document.querySelector(".bubble-zone").appendChild(bubble);
+      setTimeout(() => bubble.remove(), 10000);
+    }
+    setInterval(createAtomBubble, 800);
+  </script>
+</body>
+</html>

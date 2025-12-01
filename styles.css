@@ -1,0 +1,237 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
+  color: #1f2d3d;
+  overflow-x: hidden;
+}
+
+.app-header {
+  position: relative;
+  background: #4f46e5;
+  color: white;
+  padding: 30px 40px;
+  overflow: hidden;
+}
+
+.header-layout {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 100%;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.logo-box {
+  flex-shrink: 0;
+}
+
+.logo {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+}
+
+.text-box {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-inner {
+  text-align: center;
+}
+
+.school-name {
+  font-size: 22px;
+  font-weight: 500;
+  margin: 0 0 8px 0;
+  color: #facc15;
+}
+
+.app-title {
+  font-size: 32px;
+  margin: 0 0 8px 0;
+}
+
+.app-slogan {
+  font-size: 20px;
+  font-style: italic;
+  margin: 4px 0;
+  color: #facc15;
+}
+
+.bubble-zone {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.atom-bubble {
+  position: absolute;
+  bottom: -40px;
+  width: 32px;
+  height: 32px;
+  background: radial-gradient(circle at center, #a5f3fc, #06b6d4);
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  line-height: 32px;
+  animation: riseSlow 10s linear forwards;
+  opacity: 0.9;
+}
+
+@keyframes riseSlow {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(-200px) scale(0.6);
+    opacity: 0;
+  }
+}
+
+.app-main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.panel {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.actions {
+  margin-top: 16px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn.primary {
+  background: #3b82f6;
+  color: white;
+}
+
+.btn.success {
+  background: #16a34a;
+  color: white;
+}
+
+.btn.fun {
+  background: #f59e0b;
+  color: white;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.quiz {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.option {
+  margin: 6px 0;
+}
+
+/* ✅ Phản hồi đúng/sai cho phần Đố vui */
+.option.correct {
+  background: #dcfce7; /* xanh nhạt */
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #16a34a; /* viền xanh */
+  color: #065f46; /* chữ xanh đậm */
+}
+
+.option.incorrect {
+  background: #fee2e2; /* đỏ nhạt */
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #dc2626; /* viền đỏ */
+  color: #7f1d1d; /* chữ đỏ đậm */
+}
+
+.results {
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+/* Đáp án đúng */
+button.correct {
+  background-color: #4CAF50; /* xanh lá */
+  color: #fff;
+  border: 2px solid #2e7d32;
+}
+
+/* Đáp án sai */
+button.incorrect {
+  background-color: #f44336; /* đỏ */
+  color: #fff;
+  border: 2px solid #c62828;
+}
+.btn.option.correct {
+  background-color: #4CAF50 !important; /* xanh lá */
+  color: #fff !important;
+  border: 2px solid #2e7d32 !important;
+}
+
+.btn.option.incorrect {
+  background-color: #f44336 !important; /* đỏ */
+  color: #fff !important;
+  border: 2px solid #c62828 !important;
+}
+.btn.option.correct {
+  background-color: #4CAF50 !important;
+  color: #fff !important;
+  border: 2px solid #2e7d32 !important;
+}
+
+.btn.option.incorrect {
+  background-color: #f44336 !important;
+  color: #fff !important;
+  border: 2px solid #c62828 !important;
+}
