@@ -1,0 +1,103 @@
+{
+  "BTKL": {
+    "biet": [
+      {
+        "type": "choice",
+        "question": "Định luật bảo toàn khối lượng do ai phát biểu?",
+        "options": ["Dalton", "Lavoisier", "Avogadro", "Mendeleev"],
+        "answer": 1
+      },
+      {
+        "type": "choice",
+        "question": "Trong phản ứng hóa học, đại lượng nào được bảo toàn?",
+        "options": ["Thể tích", "Khối lượng", "Số mol", "Nhiệt độ"],
+        "answer": 1
+      },
+      {
+        "type": "fill",
+        "question": "Theo BTKL, tổng khối lượng các chất trước phản ứng ____ tổng khối lượng các chất sau phản ứng.",
+        "answer": "bằng"
+      },
+      {
+        "type": "fill",
+        "question": "BTKL áp dụng cho các phản ứng xảy ra trong hệ ____.",
+        "answer": "kín"
+      },
+      {
+        "type": "match",
+        "question": "Ghép nhà khoa học với đóng góp",
+        "pairs": [
+          { "left": "Lavoisier", "right": "Định luật BTKL" },
+          { "left": "Dalton", "right": "Thuyết nguyên tử" }
+        ]
+      },
+      {
+        "type": "match",
+        "question": "Ghép khái niệm đúng",
+        "pairs": [
+          { "left": "BTKL", "right": "Khối lượng không đổi" },
+          { "left": "PTHH", "right": "Biểu diễn phản ứng" }
+        ]
+      }
+    ],
+    "hieu": [
+      {
+        "type": "choice",
+        "question": "Vì sao cần cân bằng phương trình hóa học?",
+        "options": ["Cho đẹp", "Cho nhanh", "Để đúng BTKL", "Không cần"],
+        "answer": 2
+      },
+      {
+        "type": "choice",
+        "question": "Cân bằng PTHH nhằm đảm bảo điều gì?",
+        "options": ["Số nguyên tử mỗi bên bằng nhau", "Phản ứng nhanh hơn", "Dễ nhớ", "Ít chất tham gia"],
+        "answer": 0
+      },
+      {
+        "type": "fill",
+        "question": "Cân bằng PTHH là làm cho số nguyên tử mỗi nguyên tố ở hai vế ____.",
+        "answer": "bằng nhau"
+      },
+      {
+        "type": "fill",
+        "question": "BTKL cho phép tính khối lượng chất ____ khi biết các chất còn lại.",
+        "answer": "chưa biết"
+      },
+      {
+        "type": "match",
+        "question": "Ghép đúng nội dung",
+        "pairs": [
+          { "left": "Cân bằng PTHH", "right": "Tuân theo BTKL" },
+          { "left": "Không cân bằng", "right": "Sai định luật" }
+        ]
+      },
+      {
+        "type": "match",
+        "question": "Ghép nguyên nhân – kết quả",
+        "pairs": [
+          { "left": "Không cân bằng", "right": "Vi phạm BTKL" },
+          { "left": "Cân bằng đúng", "right": "Bảo toàn khối lượng" }
+        ]
+      }
+    ],
+    "vandung": [
+      {
+        "type": "choice",
+        "question": "4g H₂ phản ứng hết với O₂ tạo ra bao nhiêu gam H₂O?",
+        "options": ["18g", "22g", "36g", "4g"],
+        "answer": 2
+      },
+      {
+        "type": "fill",
+        "question": "Đốt cháy 12g C tạo CO₂. Khối lượng O₂ đã phản ứng là ____ gam.",
+        "answer": "32"
+      },
+      {
+        "type": "choice",
+        "question": "Nếu tổng khối lượng trước phản ứng là 50g thì sau phản ứng là?",
+        "options": ["40g", "45g", "50g", "55g"],
+        "answer": 2
+      }
+    ]
+  }
+}
